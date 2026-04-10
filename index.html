@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان تصميم موقع مكتب استشارات هندسية</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="survey-header">
+        <div class="header-container">
+            <div class="logo-icon"><i class="fas fa-drafting-compass"></i></div>
+            <h1>استبيان تصميم موقع مكتب استشارات هندسية</h1>
+            <p>نرجو التكرم بالإجابة على الأسئلة التالية لمساعدتنا في تصميم موقع يعكس هوية المكتب بشكل احترافي.</p>
+        </div>
+    </header>
+
+    <main class="survey-main">
+        <form id="surveyForm" class="survey-form" name="engineering-survey" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="engineering-survey" />
+            
+            <!-- 1️⃣ معلومات عامة عن المكتب -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">1️⃣</span> معلومات عامة عن المكتب</h2>
+                <div class="input-group">
+                    <label>اسم المكتب الرسمي:</label>
+                    <input type="text" name="office_name" required placeholder="أدخل اسم المكتب">
+                </div>
+                <div class="input-group">
+                    <label>هل يوجد شعار (Logo)؟ (يرجى إرفاقه إن وجد)</label>
+                    <input type="file" name="logo_file" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label>سنة التأسيس:</label>
+                    <input type="number" name="foundation_year" placeholder="مثال: 2010">
+                </div>
+                <div class="input-group">
+                    <label>الرؤية:</label>
+                    <textarea name="vision" rows="2" placeholder="اكتب رؤية المكتب هنا..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label>الرسالة:</label>
+                    <textarea name="mission" rows="2" placeholder="اكتب رسالة المكتب هنا..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label>نبذة مختصرة عن المكتب:</label>
+                    <textarea name="about_office" rows="3" placeholder="تحدث عن تاريخ المكتب وإنجازاته..."></textarea>
+                </div>
+            </div>
+
+            <!-- 2️⃣ التخصصات والخدمات -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">2️⃣</span> التخصصات والخدمات</h2>
+                <div class="input-group">
+                    <label>ما التخصصات الرئيسية للمكتب؟ (مثال: مدني، معماري، كهرباء، ميكانيكا...)</label>
+                    <textarea name="specialties" rows="2"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>ما الخدمات التي يقدمها المكتب بالتفصيل؟</label>
+                    <textarea name="services_detail" rows="4"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>هل توجد خدمات مميزة أو خاصة تميزكم عن المنافسين؟</label>
+                    <textarea name="unique_services" rows="2"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>هل الخدمات موجهة لـ:</label>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox"><input type="checkbox" name="target_audience" value="individuals"><span></span> أفراد</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="target_audience" value="companies"><span></span> شركات</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="target_audience" value="government"><span></span> جهات حكومية</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3️⃣ المشاريع السابقة (الأعمال) -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">3️⃣</span> المشاريع السابقة (الأعمال)</h2>
+                <div class="input-group">
+                    <label>هل لديكم مشاريع سابقة يمكن عرضها؟</label>
+                    <div class="radio-group">
+                        <label class="custom-radio"><input type="radio" name="has_projects" value="yes"><span></span> نعم</label>
+                        <label class="custom-radio"><input type="radio" name="has_projects" value="no"><span></span> لا</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>يرجى إرفاق صور المشاريع (إن وجدت):</label>
+                    <input type="file" name="projects_images" multiple>
+                </div>
+                <div class="input-group">
+                    <label>وصف مختصر لكل مشروع (الموقع، النوع، السنة...):</label>
+                    <textarea name="projects_description" rows="4"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>هل هناك مشاريع مميزة تودون إبرازها؟</label>
+                    <textarea name="highlighted_projects" rows="2"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>هل هناك أي قيود على نشر الصور؟</label>
+                    <input type="text" name="image_posting_restrictions" class="form-control">
+                </div>
+            </div>
+
+            <!-- 4️⃣ الجمهور المستهدف -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">4️⃣</span> الجمهور المستهدف</h2>
+                <div class="input-group">
+                    <label>من هو العميل المستهدف؟</label>
+                    <textarea name="target_client_profile" rows="2"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>النطاق الجغرافي للعمل:</label>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox"><input type="checkbox" name="geographical_scope" value="local"><span></span> محلي</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="geographical_scope" value="international"><span></span> دولي</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>لغة الموقع المطلوبة:</label>
+                    <div class="radio-group">
+                        <label class="custom-radio"><input type="radio" name="site_language" value="ar"><span></span> عربي</label>
+                        <label class="custom-radio"><input type="radio" name="site_language" value="en"><span></span> إنجليزي</label>
+                        <label class="custom-radio"><input type="radio" name="site_language" value="both" checked><span></span> كلاهما</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5️⃣ صفحات ومحتوى الموقع -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">5️⃣</span> صفحات ومحتوى الموقع</h2>
+                <div class="input-group">
+                    <label>يرجى تحديد الصفحات المطلوبة:</label>
+                    <div class="checkbox-grid">
+                        <label class="custom-checkbox"><input type="checkbox" name="required_pages" value="home" checked><span></span> الصفحة الرئيسية</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="required_pages" value="about" checked><span></span> من نحن</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="required_pages" value="services" checked><span></span> الخدمات</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="required_pages" value="projects" checked><span></span> المشاريع</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="required_pages" value="contact" checked><span></span> تواصل معنا</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="required_pages" value="blog"><span></span> المدونة / مقالات</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>أخرى:</label>
+                    <input type="text" name="other_pages_needed" placeholder="اذكر صفحات أخرى...">
+                </div>
+                <div class="input-group">
+                    <label>هل ترغبون بإضافة محتوى تعليمي أو مقالات هندسية؟</label>
+                    <div class="radio-group">
+                        <label class="custom-radio"><input type="radio" name="educational_content" value="yes"><span></span> نعم</label>
+                        <label class="custom-radio"><input type="radio" name="educational_content" value="no"><span></span> لا</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6️⃣ التصميم والهوية البصرية -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">6️⃣</span> التصميم والهوية البصرية</h2>
+                <div class="input-group">
+                    <label>هل لديكم هوية بصرية محددة (ألوان، خطوط)؟</label>
+                    <textarea name="visual_identity_details" rows="2"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>هل تفضلون التصميم:</label>
+                    <div class="radio-group">
+                        <label class="custom-radio"><input type="radio" name="design_preference" value="simple"><span></span> بسيط</label>
+                        <label class="custom-radio"><input type="radio" name="design_preference" value="luxury_modern"><span></span> فاخر / حديث</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>هل هناك مواقع أعجبتكم (يرجى ذكرها)؟</label>
+                    <textarea name="liked_websites_references" rows="2"></textarea>
+                </div>
+            </div>
+
+            <!-- 7️⃣ وسائل التواصل -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">7️⃣</span> وسائل التواصل</h2>
+                <div class="input-group">
+                    <label>طرق التواصل المفضلة:</label>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox"><input type="checkbox" name="preferred_contact_methods" value="phone"><span></span> رقم هاتف</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="preferred_contact_methods" value="whatsapp"><span></span> واتساب</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="preferred_contact_methods" value="email"><span></span> بريد إلكتروني</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="preferred_contact_methods" value="form"><span></span> نموذج داخل الموقع</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>هل ترغبون بزر "طلب استشارة" سريع؟</label>
+                    <div class="radio-group">
+                        <label class="custom-radio"><input type="radio" name="quick_consult_btn" value="yes"><span></span> نعم</label>
+                        <label class="custom-radio"><input type="radio" name="quick_consult_btn" value="no"><span></span> لا</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>روابط حسابات التواصل الاجتماعي:</label>
+                    <textarea name="social_media_profiles" rows="2"></textarea>
+                </div>
+            </div>
+
+            <!-- 8️⃣ الموثوقية والمصداقية -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">8️⃣</span> الموثوقية والمصداقية</h2>
+                <div class="input-group">
+                    <label>هل لديكم (اختر ما يتوفر):</label>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox"><input type="checkbox" name="credibility_items" value="certificates"><span></span> شهادات أو اعتمادات</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="credibility_items" value="partners"><span></span> شركاء</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="credibility_items" value="testimonials"><span></span> آراء عملاء (Testimonials)</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>هل ترغبون بعرض فريق العمل؟</label>
+                    <div class="radio-group">
+                        <label class="custom-radio"><input type="radio" name="show_team_members" value="yes"><span></span> نعم</label>
+                        <label class="custom-radio"><input type="radio" name="show_team_members" value="no"><span></span> لا</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9️⃣ الجوانب التقنية -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">9️⃣</span> الجوانب التقنية</h2>
+                <div class="input-group">
+                    <label>هل لديكم:</label>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox"><input type="checkbox" name="technical_assets" value="domain"><span></span> اسم نطاق (Domain)</label>
+                        <label class="custom-checkbox"><input type="checkbox" name="technical_assets" value="hosting"><span></span> استضافة (Hosting)</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>نوع الموقع المطلوب:</label>
+                    <div class="radio-group" style="flex-direction: column; gap: 10px;">
+                        <label class="custom-radio"><input type="radio" name="required_site_type" value="introductory"><span></span> موقع تعريفي فقط</label>
+                        <label class="custom-radio"><input type="radio" name="required_site_type" value="booking_system"><span></span> موقع مع نظام حجز / تسجيل</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>هل ترغبون بلوحة تحكم لتعديل المحتوى؟</label>
+                    <div class="radio-group">
+                        <label class="custom-radio"><input type="radio" name="cms_required" value="yes"><span></span> نعم</label>
+                        <label class="custom-radio"><input type="radio" name="cms_required" value="no"><span></span> لا</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🔟 أهداف المشروع -->
+            <div class="form-section">
+                <h2 class="section-title"><span class="section-number">🔟</span> أهداف المشروع وملاحظات</h2>
+                <div class="input-group">
+                    <label>ما الهدف الرئيسي من الموقع؟</label>
+                    <textarea name="primary_project_goal" rows="2"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>هل هناك موعد محدد لإطلاق الموقع؟</label>
+                    <input type="date" name="launch_deadline" class="form-control">
+                </div>
+                <div class="input-group">
+                    <label>الميزانية التقريبية (اختياري):</label>
+                    <input type="text" name="estimated_budget" class="form-control">
+                </div>
+                <div class="input-group" style="margin-top: 2rem;">
+                    <label><i class="fas fa-paperclip"></i> أي معلومات أو متطلبات إضافية تودون ذكرها:</label>
+                    <textarea name="additional_technical_notes" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="submit-wrapper">
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span>إرسال الاستبيان الكامل والنهائي</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            
+        </form>
+    </main>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="check-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>تم إرسال الاستبيان بنجاح!</h2>
+            <p>شكراً لك، سيتم مراجعة كافة البيانات الفنية والهندسية التي قدمتها والتواصل معك قريباً.</p>
+            <button class="btn-close" id="closeModal">إغلاق</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
